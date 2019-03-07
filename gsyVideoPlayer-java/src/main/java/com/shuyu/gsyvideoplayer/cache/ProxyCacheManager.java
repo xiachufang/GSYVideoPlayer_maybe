@@ -24,6 +24,11 @@ import tv.danmaku.ijk.media.player.IMediaPlayer;
 
 public class ProxyCacheManager implements ICacheManager, CacheListener {
 
+    /**
+     * 最大缓存30M
+     */
+    private static int CACHE_MAX_SIZE = 30 * 1024 * 1024;
+
     //视频代理
     protected HttpProxyCacheServer proxy;
 
@@ -153,6 +158,7 @@ public class ProxyCacheManager implements ICacheManager, CacheListener {
             file.mkdirs();
         }
         HttpProxyCacheServer.Builder builder = new HttpProxyCacheServer.Builder(context);
+        builder.maxCacheSize(CACHE_MAX_SIZE);
         builder.cacheDirectory(file);
         builder.headerInjector(userAgentHeadersInjector);
         mCacheDir = file;
@@ -168,6 +174,7 @@ public class ProxyCacheManager implements ICacheManager, CacheListener {
      */
     public HttpProxyCacheServer newProxy(Context context) {
         return new HttpProxyCacheServer.Builder(context.getApplicationContext())
+                .maxCacheSize(CACHE_MAX_SIZE)
                 .headerInjector(userAgentHeadersInjector).build();
     }
 
