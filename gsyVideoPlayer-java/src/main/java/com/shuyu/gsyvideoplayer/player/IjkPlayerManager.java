@@ -74,7 +74,7 @@ public class IjkPlayerManager implements IPlayerManager {
                 mediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "mediacodec-handle-resolution-change", 1);
             }
 
-            if (gsyModel.isCache() && cacheManager != null) {
+            if (cacheManager != null) {
                 cacheManager.doCacheLogic(context, mediaPlayer, url, gsyModel.getMapHeadData(), gsyModel.getCachePath());
             } else {
                 if (!TextUtils.isEmpty(url)) {
