@@ -27,7 +27,7 @@ public class ProxyCacheManager implements ICacheManager, CacheListener {
     /**
      * 最大缓存30M
      */
-    private static int CACHE_MAX_SIZE = 30 * 1024 * 1024;
+    private static int CACHE_MAX_SIZE = 1 * 1024 * 1024;
 
     //视频代理
     protected HttpProxyCacheServer proxy;
