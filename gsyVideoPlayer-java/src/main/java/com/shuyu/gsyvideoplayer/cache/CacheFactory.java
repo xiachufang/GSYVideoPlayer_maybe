@@ -13,16 +13,16 @@ public class CacheFactory {
     }
 
     public static ICacheManager getCacheManager() {
-        if (sICacheManager == null) {
-            sICacheManager = ProxyCacheManager.class;
-        }
-        try {
-            return sICacheManager.newInstance();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        }
+//        if (sICacheManager == null) {
+//            sICacheManager = ProxyCacheManager.class;
+//        }
+//        try {
+//            return sICacheManager.newInstance();
+//        } catch (InstantiationException e) {
+//            e.printStackTrace();
+//        } catch (IllegalAccessException e) {
+//            e.printStackTrace();
+//        }
         return null;
     }
 }
