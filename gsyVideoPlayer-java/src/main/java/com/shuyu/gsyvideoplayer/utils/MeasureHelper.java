@@ -17,6 +17,7 @@
 
 package com.shuyu.gsyvideoplayer.utils;
 
+import android.util.Log;
 import android.view.View;
 
 
@@ -228,6 +229,7 @@ public final class MeasureHelper {
 
         mMeasuredWidth = width;
         mMeasuredHeight = height;
+        Log.d("zkq", "measuredW: " + mMeasuredWidth + ", measuredH: " + mMeasuredHeight);
     }
 
 
