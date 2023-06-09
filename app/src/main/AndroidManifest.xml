@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.gsyvideoplayer"
     tools:ignore="LockedOrientationActivity">
     <!-- 请求访问网络状态 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 请求访问网络 -->
@@ -9,7 +8,8 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
 
     <application
         android:name=".GSYApplication"
@@ -197,6 +197,11 @@
             android:theme="@style/Theme.AppCompat.Transitions" />
         <activity
             android:name=".DetailDownloadPlayer"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Transitions" />
+        <activity
+            android:name=".DetailDownloadExoPlayer"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Transitions" />

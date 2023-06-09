@@ -15,6 +15,7 @@ import com.example.gsyvideoplayer.DanmkuVideoActivity;
 import com.example.gsyvideoplayer.DetailADPlayer;
 import com.example.gsyvideoplayer.DetailADPlayer2;
 import com.example.gsyvideoplayer.DetailControlActivity;
+import com.example.gsyvideoplayer.DetailDownloadExoPlayer;
 import com.example.gsyvideoplayer.DetailDownloadPlayer;
 import com.example.gsyvideoplayer.DetailFilterActivity;
 import com.example.gsyvideoplayer.DetailListPlayer;
@@ -30,7 +31,6 @@ import com.example.gsyvideoplayer.ListVideoActivity;
 import com.example.gsyvideoplayer.PlayActivity;
 import com.example.gsyvideoplayer.PlayEmptyControlActivity;
 import com.example.gsyvideoplayer.PlayPickActivity;
-import com.example.gsyvideoplayer.R;
 import com.example.gsyvideoplayer.RecyclerView2Activity;
 import com.example.gsyvideoplayer.RecyclerView3Activity;
 import com.example.gsyvideoplayer.RecyclerViewActivity;
@@ -64,7 +64,7 @@ public class JumpUtils {
             ActivityCompat.startActivity(activity, intent, activityOptions.toBundle());
         } else {
             activity.startActivity(intent);
-            activity.overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
+            activity.overridePendingTransition(androidx.appcompat.R.anim.abc_fade_in, androidx.appcompat.R.anim.abc_fade_out);
         }
     }
 
@@ -84,7 +84,7 @@ public class JumpUtils {
             ActivityCompat.startActivity(activity, intent, activityOptions.toBundle());
         } else {
             activity.startActivity(intent);
-            activity.overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
+            activity.overridePendingTransition(androidx.appcompat.R.anim.abc_fade_in, androidx.appcompat.R.anim.abc_fade_out);
         }
     }
 
@@ -104,7 +104,7 @@ public class JumpUtils {
             ActivityCompat.startActivity(activity, intent, activityOptions.toBundle());
         } else {
             activity.startActivity(intent);
-            activity.overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
+            activity.overridePendingTransition(androidx.appcompat.R.anim.abc_fade_in, androidx.appcompat.R.anim.abc_fade_out);
         }
     }
 
@@ -266,6 +266,16 @@ public class JumpUtils {
      */
     public static void goToDetailDownloadActivity(Activity activity) {
         Intent intent = new Intent(activity, DetailDownloadPlayer.class);
+        activity.startActivity(intent);
+    }
+
+    /**
+     * 跳转到详情播放
+     *
+     * @param activity
+     */
+    public static void goToDetailDownloadExoActivity(Activity activity) {
+        Intent intent = new Intent(activity, DetailDownloadExoPlayer.class);
         activity.startActivity(intent);
     }
 

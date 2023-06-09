@@ -69,30 +69,30 @@ allprojects {
 #### A、直接引入
 ```
  //完整版引入
- implementation 'com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer:v8.3.4-release-jitpack'
+ implementation 'com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer:v8.3.5-release-jitpack'
 
 
  //是否需要AliPlayer模式
- implementation 'com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer-aliplay:8.3.4-release-jitpack'
+ implementation 'com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer-aliplay:v8.3.5-release-jitpack'
 ```
 
 #### B、添加java和你想要的so支持：
 
 ```
- implementation 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-java:v8.3.4-release-jitpack'
+ implementation 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-java:v8.3.5-release-jitpack'
 
  //是否需要ExoPlayer模式
- implementation 'com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer-exo2:v8.3.4-release-jitpack'
+ implementation 'com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer-exo2:v8.3.5-release-jitpack'
 
  //是否需要AliPlayer模式
- implementation 'com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer-aliplay:8.3.4-release-jitpack'
+ implementation 'com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer-aliplay:v8.3.5-release-jitpack'
 
  //根据你的需求ijk模式的so
- implementation 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-arm64:v8.3.4-release-jitpack'
- implementation 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-armv7a:v8.3.4-release-jitpack'
- implementation 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-armv5:v8.3.4-release-jitpack'
- implementation 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-x86:v8.3.4-release-jitpack'
- implementation 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-x64:v8.3.4-release-jitpack'
+ implementation 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-arm64:v8.3.5-release-jitpack'
+ implementation 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-armv7a:v8.3.5-release-jitpack'
+ implementation 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-armv5:v8.3.5-release-jitpack'
+ implementation 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-x86:v8.3.5-release-jitpack'
+ implementation 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-x64:v8.3.5-release-jitpack'
 ```
 
 #### C、支持其他格式协议的（mpeg，rtsp, concat、crypto协议）
@@ -101,16 +101,16 @@ A、B普通版本支持263/264/265等，对于mpeg编码会有声音无画面情
 C 引入的so支持mpeg编码和其他补充协议，但是so包相对变大。
 
 ```
- implementation 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-java:v8.3.4-release-jitpack'
+ implementation 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-java:v8.3.5-release-jitpack'
 
  //是否需要ExoPlayer模式
- implementation 'com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer-exo2:v8.3.4-release-jitpack'
+ implementation 'com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer-exo2:v8.3.5-release-jitpack'
 
  //是否需要AliPlayer模式
- implementation 'com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer-aliplay:8.3.4-release-jitpack'
+ implementation 'com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer-aliplay:v8.3.5-release-jitpack'
 
  //更多ijk的编码支持
- implementation 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-ex_so:v8.3.4-release-jitpack'
+ implementation 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-ex_so:v8.3.5-release-jitpack'
 
 ```
 
@@ -180,7 +180,7 @@ ExoSourceManager.setExoMediaSourceInterceptListener(new ExoMediaSourceInterceptL
 ## 二、其他推荐
 
 ### * 我所在的技术社区：[掘金](https://juejin.cn/user/817692379985752/posts)
-### * QQ群，有兴趣的欢迎（平时吹水吐槽多，因为人数饱和，就是日常瞎扯）：174815284 。
+### * QQ群，有兴趣的欢迎（平时吹水吐槽多，因为人数饱和，就是日常瞎扯，没人解决问题的）：174815284 。
 ### * [Flutter Github客户端](https://github.com/CarGuo/gsy_github_app_flutter) 、[React Native Github客户端](https://github.com/CarGuo/GSYGithubAPP) 、 [Weex Github客户端](https://github.com/CarGuo/GSYGithubAPPWeex) 、 [原生 Kotlin Github客户端](https://github.com/CarGuo/GSYGithubAPPKotlin)
 ### * [RxFFmpeg Android 的音视频编辑工具](https://github.com/microshow/RxFFmpeg)
 ### * [oarplayer Rtmp播放器,基于MediaCodec与srs-librtmp,不依赖ffmpeg](https://github.com/qingkouwei/oarplayer)
@@ -234,34 +234,17 @@ compileSdk 太高|--- **[#3514](https://github.com/CarGuo/GSYVideoPlayer/issues/
 
 ## 五、近期版本
 
+### v8.3.5-release-jitpack (2023-03-15)
+* update exo 2.18.4
+* fix #3773
+* fix #3756
+* fix #3683
+
 ### v8.3.4-release-jitpack (2022-09-01)
 * update exo 2.18.1
 * fix #3673
 * fix #3677
 * fix #3676
-
-### v8.3.3-release-jitpack (2022-07-14)
-* ijk 增加支持 assets 播放支持
-* fix #3625
-* fix #3615
-
-### v8.3.2-release-jitpack (2022-06-24)
-* update exo 2.18.0
-* fix #3608 兼容副屏幕
-
-### v8.3.1-release-jitpack (2022-06-23)
-* fix #3609
-* fix #3600
-
-### v8.3.0-release-jitpack (2022-06-06)
-* fix #3559 ProxyCacheManager
-* remove dependencies: transitionsEverywhere
-* fix #3568 HttpProxyCache &  HttpUrlSource
-* support AliPlayer
-* surfaceView 支持截图
-* fix #3580
-* feat(Media DataSource): Video playback data source supports data input stream.(Currently only IJK kernel is supported) (#3582)
-
 
 
 ### 非 androidx 版本为 6.0.3 以下版本。更多兼容版本请查阅版本更新。
@@ -295,6 +278,9 @@ compileSdk 太高|--- **[#3514](https://github.com/CarGuo/GSYVideoPlayer/issues/
 -keep class com.google.android.exoplayer2.** {*;}
 -keep interface com.google.android.exoplayer2.**
 
+-keep class com.shuyu.alipay.** {*;}
+-keep interface com.shuyu.alipay.**
+
 -keep public class * extends android.view.View{
     *** get*();
     void set*(***);
@@ -303,6 +289,17 @@ compileSdk 太高|--- **[#3514](https://github.com/CarGuo/GSYVideoPlayer/issues/
     public <init>(android.content.Context, android.util.AttributeSet);
     public <init>(android.content.Context, android.util.AttributeSet, int);
 }
+```
+
+如果是阿里云播放器，可以参考它的文档（https://help.aliyun.com/document_detail/124711.html?spm=a2c4g.124711.0.0.7fa0125dkwUPoU），需要新增一些 keep 规则：
+
+```
+-keep class com.alivc.**{*;}
+-keep class com.aliyun.**{*;}
+-keep class com.cicada.**{*;}
+-dontwarn com.alivc.**
+-dontwarn com.aliyun.**
+-dontwarn com.cicada.**
 ```
 
 ## 温馨提示
